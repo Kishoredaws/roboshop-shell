@@ -30,6 +30,6 @@ aws route53 change-resource-record-sets --hosted-zone-id $HOSTED_ZONE_ID --chang
                                  "ResourceRecords": [{ "Value": "'$IP_ADDRESS'"}]
 }}]
 }
-,
+'
 done 
  
