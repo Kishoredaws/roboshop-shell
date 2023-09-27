@@ -1,5 +1,4 @@
 #!/bin/bash
-
 NAMES=$@
 INSTANCE_TYPE=""
 IMAGE_ID=ami-03265a0778a880afb
