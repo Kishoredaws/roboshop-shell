@@ -1,10 +1,11 @@
 #!/bin/bash
+
 NAMES=$@
 INSTANCE_TYPE=""
 IMAGE_ID=ami-03265a0778a880afb
 SECURITY_GROUP_ID=sg-01ea0eafb8976901c
 DOMAIN_NAME=kishoremerugudevops.online
-HOSTED_ZONE_ID=Z00920562NQGNYOPKAAQ3
+HOSTED_ZONE_ID=Z00920562NQGNYOPKAAQ
 
 # if mysql or mongodb instance_type should be t3.medium , for all others it is t2.micro
 
