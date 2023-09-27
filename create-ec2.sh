@@ -1,9 +1,18 @@
 #!/bin/bash
 NAMES=("mongodb" "mysql" "rabbitmq" "redis" "catalogue" "cart" "user" "payment" "dispatch" "shipping" "web")
+INSTANCE_TYPE=""
+IMAGE_ID=ami-03265a0778a880afb
+SECURITY_GROUP=sg-01ea0eafb8976901c
 for i in "${NAMES[@]}"
 do
-    echo "Name:$i"
-    done
+if[[$i=="mongodb" || $i=="mysql"]];
+then
+    INSTANCE_TYPE="t3.medium"
+else
+    INSTANCE_TYPE="t2.micro"
+fi
+    echo "The created instance is $i"
+aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE  --security-group-ids $SECURITY_GROUP
+done
 
-# aws ec2 run-instances --image-id ami-03265a0778a880afb --instance-type t2.micro  --security-group-ids sg-01ea0eafb8976901c
 
